@@ -1,0 +1,107 @@
+/*-------------------------------------------------------*/
+/* Grid
+/*-------------------------------------------------------*/
+.section-wrap {
+  padding: 70px 0;
+  overflow: hidden;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  .mobile & {
+    background-position: 50% 50% !important;
+    background-attachment: scroll !important;
+  }
+}
+
+.container-semi-fluid {
+  padding: 0 50px;
+
+  @include bp-lg-down {
+    padding: 0 15px;
+  }
+}
+
+
+/* Flexbox
+-------------------------------------------------------*/
+.flex-parent {
+  @include display-flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  // align-items: center;
+  justify-content: space-between;
+}
+
+.flex-child {
+  @include flex (1 0 0);
+}
+
+
+/* Columns With No Gutters
+-------------------------------------------------------*/
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+/* Row gutters
+-------------------------------------------------------*/
+.row.row-4 {
+  margin: 0 -2px;
+}
+
+.row.row-4 > div {
+  padding: 0 2px;
+}
+
+.row.row-10 {
+  margin: 0 -5px;
+}
+
+.row.row-10 > div {
+  padding: 0 5px;
+}
+
+.row.row-12 {
+  margin: 0 -6px;
+}
+
+.row.row-12 > div {
+  padding: 0 6px;
+}
+
+.row.row-16 {
+  margin: 0 -8px;
+}
+
+.row.row-16 > div {
+  padding: 0 8px;
+}
+
+.row.row-20 {
+  margin: 0 -10px;
+}
+
+.row.row-20 > div {
+  padding: 0 10px;
+}
+
+.row.row-35 {
+  margin: 0 -35px;
+}
+
+.row.row-35 > div {
+  padding: 0 35px;
+}

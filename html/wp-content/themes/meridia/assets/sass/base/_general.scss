@@ -1,0 +1,192 @@
+/*
+Theme Name: Meridia
+Theme URI: https://deothemes.com/wordpress-themes/meridia-minimal-lifestyle-blog-wordpress-theme/
+Author: DeoThemes
+Author URI: https://deothemes.com
+Description: Meridia is a minimal elegant Gutenberg ready blogging WordPress Theme. If you are passionate about fashion, travel, food, health and lifestyle then Meridia Blog WordPress theme is for you. It includes theme customizer options, custom widgets, social integragration and much more. Meridia is fast, lightweight, mobile friendly and SEO optimized. Make your perfect blog today. Check the demo here: https://demo.deothemes.com/meridia/
+Version: 1.1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: meridia
+Tags: blog, news, theme-options, grid-layout, post-formats, left-sidebar, right-sidebar, custom-background, featured-images, footer-widgets, e-commerce, block-styles, wide-blocks
+
+@fs_premium_only sidebar-shop.php, /assets/sass/woocommerce.scss, /assets/css/woocommerce.css, /template-parts/header/header-2.php, /template-parts/header/header-3.php, /template-parts/featured-area/hero-carousel.php, /template-parts/featured-area/hero-image.php, /includes/woocommerce/, /includes/plugins/, /includes/demo-import/, /assets/img/defaults/, /includes/child-theme/ 
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/*-------------------------------------------------------*/
+/* Table of Content
+
+1.General
+  1.1.Typography
+2.Common Elements
+3.Blog
+4.About me
+5.Contact
+6.Navigation
+7.Footer
+
+/*-------------------------------------------------------*/
+
+
+/*-------------------------------------------------------*/
+/* General
+/*-------------------------------------------------------*/
+
+.clearfix {
+	*zoom: 1;
+
+	&:before, &:after {
+		display: table;
+		line-height: 0;
+		content: "";
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+.clear { clear: both; }
+.oh { overflow: hidden; }
+.relative {	position: relative; }
+.mobile section {	background-attachment: scroll !important; }
+
+.bg-dark { background-color: $bg-dark; }
+.bg-light { background-color: $bg-light; }
+.bg-color { background-color: $main-color; }
+.white { color: #fff; }
+.static {	position: static; }
+.block { display: block; }
+.left { float: left; }
+.right { float: right; }
+.valign { position: absolute; top: 50%; @include transform (translateY(-50%)); }
+.container-fluid.semi-fluid { padding: 0 50px; }
+.img-fw { width: 100%; }
+.last {	margin-bottom: 0 !important; }
+@media (max-width: 991px) { .md-text-center {text-align: center}; }
+@media (max-width: 767px) { .sm-text-center {text-align: center}; }
+@media (max-width: 480px) { .xs-text-center {text-align: center}; }
+img.alignleft {float: left; margin: 5px 30px 30px 0; }
+img.alignright { float: right; margin: 5px 0 30px 30px; }
+
+
+::-moz-selection {
+	color: #000;
+	background-color: #fbedc4;
+}
+
+::-webkit-selection {
+	color: #000;
+	background-color: #fbedc4;
+}
+
+::selection {
+	color: #000;
+	background-color: #fbedc4;
+}
+
+a {
+	text-decoration: none;
+	color: $main-color;
+	@include transition (color .1s ease-in-out);
+
+	&:hover {
+		text-decoration: none;
+		color: $bg-dark;
+	}
+
+  &:focus {
+    color: $main-color;
+    text-decoration: none;
+	}
+	
+	&:active {
+		outline: 0;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $body-font;
+	font-size: 15px;
+	line-height: 1.5;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	background: #fff;
+	outline: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	color: $text-color;
+
+	img {
+		border: none;
+		max-width: 100%;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+	}
+}
+
+video {
+	height: 100%;
+	width: 100%;
+}
+
+/*-------------------------------------------------------*/
+/* Preloader
+/*-------------------------------------------------------*/
+.loader-mask {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#fff; 
+  z-index:99999;
+}
+
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 0;
+  color: $main-color;
+  display: inline-block;
+  margin:-25px 0 0 -25px;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+
+  & div {
+    background-color: $main-color;
+    display: inline-block;
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    opacity: .5;
+    border-radius: 50%;
+    -webkit-animation: ballPulseDouble 2s ease-in-out infinite;
+    animation: ballPulseDouble 2s ease-in-out infinite;
+  }
+
+  & div:last-child {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+  }
+}
+
+@-webkit-keyframes ballPulseDouble{0%,100%{-webkit-transform:scale(0);transform:scale(0)}50%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes ballPulseDouble{0%,100%{-webkit-transform:scale(0);transform:scale(0)}50%{-webkit-transform:scale(1);transform:scale(1)}}

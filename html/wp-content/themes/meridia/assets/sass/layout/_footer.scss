@@ -1,0 +1,43 @@
+/*-------------------------------------------------------*/
+/* Footer
+/*-------------------------------------------------------*/
+.footer {
+
+  &__widgets {
+    padding: 64px 0 0;
+  }
+
+  &__socials {
+    padding: 20px 0;
+    border-top: 1px solid $border-color;
+    text-align: center;
+
+    .social {
+      display: inline;
+      margin-right: 24px;
+      font-size: 14px;
+      color: $text-color;
+    }
+  }
+  
+}
+
+.footer-bottom {
+  padding: 21px 0;
+  background-color: #000;
+}
+
+.copyright {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $meta-color;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

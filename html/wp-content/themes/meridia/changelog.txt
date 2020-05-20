@@ -1,0 +1,15 @@
+= 1.1.2 - May 3, 2020 =
+- Fixed: Compatibility with the latest version of WordPress editor
+- Fixed: Bug when saving posts with video embed 
+
+= 1.1.1 - April 18, 2020 =
+- Changed: Instagram Feed integration plugin
+- Fixed: Demo import files
+
+= 1.1.0 - April 17, 2020 =
+- Added: WooCommerce Integration
+- Changed: Page and page title HTML markup for better UX
+- Fixed: Small CSS tweaks for better UI
+
+= 1.0.8 - April 15, 2020 =
+- Initial release

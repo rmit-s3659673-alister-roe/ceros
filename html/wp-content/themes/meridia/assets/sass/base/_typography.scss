@@ -1,0 +1,116 @@
+/*-------------------------------------------------------*/
+/* Typography
+/*-------------------------------------------------------*/
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: $heading-font;
+	margin-top: 0;
+	color: $heading-color;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+h1, .h1 { font-size: 2.125rem; }
+h2, .h2 { font-size: 2rem; }
+h3, .h3 { font-size: 1.75rem; }
+h4, .h4 { font-size: 1.5rem; }
+h5, .h5 { font-size: 1.25rem; }
+h6, .h6 { font-size: 1.125rem; }
+
+h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
+	color: inherit;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  color: $heading-color;
+  font-size: 70%;
+}
+
+p {
+  margin: 0 0 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+@include bp-xl-down { .text-lg-center {text-align: center}; }
+@include bp-lg-down { .text-md-center {text-align: center}; }
+@include bp-md-down { .text-sm-center {text-align: center}; }
+@include bp-sm-down { .text-xs-center {text-align: center}; }
+
+.uppercase { text-transform: uppercase; letter-spacing: 0.1em; }
+.small { font-size: 15px; }
+
+.heading-lines { 
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  .widget-title {
+    display: inline-block;
+    padding: 0 16px;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 500px;
+      position: absolute;
+      top: 40%;
+      right: 100%;
+      background-color: $border-color;
+    }
+
+    &:after {
+      right: auto;
+      left: 100%;
+    }
+  }
+}
+
+
+.heading-underline {
+  font-size: 30px;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 90px;
+  padding: 0 24px;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    margin-top: 20px;
+    background-color: #171717;
+  }
+}
+
+.lead {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+address {
+  font-style: normal;
+  margin-bottom: 0;
+  line-height: 26px;
+}
